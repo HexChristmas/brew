@@ -347,7 +347,7 @@ then
   HOMEBREW_BASH_COMMAND="$HOMEBREW_LIBRARY/Homebrew/dev-cmd/$HOMEBREW_COMMAND.sh"
 fi
 
-check-run-command-as-root() {
+#check-run-command-as-root() {
   [[ "$(id -u)" = 0 ]] || return
 
   # Homebrew Services may need `sudo` for system-wide daemons.
@@ -362,7 +362,7 @@ As Homebrew does not drop privileges on installation you would be giving all
 build scripts full access to your system.
 EOS
 }
-check-run-command-as-root
+#check-run-command-as-root
 
 check-prefix-is-not-tmpdir() {
   [[ -z "${HOMEBREW_MACOS}" ]] && return
